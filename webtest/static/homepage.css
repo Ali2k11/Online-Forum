@@ -1,0 +1,243 @@
+/*Global*/
+*{
+    box-sizing:border-box;
+}
+
+html{
+    font-size:14px;
+    font-family: Verdana, sans-serif;
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+a{
+    color: rgb(94, 255, 0);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1{
+    font-size:16px;
+    font-weight:bolder;
+}
+
+/* index.html */
+
+.container {
+    margin: 10px;
+    padding: 20px;
+}
+.topics {
+    margin-top: 20px;
+
+}
+
+.topic-title{
+    background-color:rgb(174, 0, 255);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+
+}
+
+.topic-description *{
+    margin-block: 0;
+}
+
+.topic-column{
+    padding: 10px;
+    margin: 4px; 
+    border-radius: 5px;
+    background-color:rgb(174, 0, 255);
+
+}
+
+.center{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+/*Mobile Devices
+
+@media screen and (max-width:460px){
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .topic-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    
+    }
+    .topic-stats{
+        font-size: 12px;
+    }
+    
+}
+
+Tablets
+
+@media screen and(min-width: 460px) and (max-width:1024){
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .topic-row{
+        display:grid;
+        grid-template-columns: 10% 60% 13% 20%;
+    }
+
+    .topic-icon i{
+        font-size:35px;
+    }
+    html{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+}
+
+/*Bar*/
+
+header{
+    margin-inline: 10px
+}
+
+.bar{
+    display:flex;
+    align-items: center;
+    margin: 20px;
+    padding-right: 100pxl;
+}
+
+
+
+.hide{
+    display:none;
+}
+
+@font-face {
+    font-family: MilkyNice;
+    src:url(MilkyNice-Clean.otf);
+}
+.title{
+    font-size: 60px;
+    display: inline-block;
+    font-family: MilkyNice;
+}
+
+.search-bar{
+    border:solid 1px purple;
+    margin-left:150px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px  purple 
+}
+
+.search-bar select{
+    padding: 10px;
+}
+
+.search-bar input{
+    padding:10px;
+    padding-right: 220px;
+}
+
+.search-bar button{
+    padding:10px;
+    background-color: white;
+}
+
+.search-bar button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 1px 2px 3px white;
+}
+
+
+/* Info*/
+
+.info{
+    padding: 20px;
+    background-color: purple;
+}
+
+.chart{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: purple;
+    display:block;
+    text-align: center;
+
+}
+
+.topic-head{
+    display:flex;
+}
+
+.topic-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: purple;
+    font-weight:bold;
+}
+
+.topic-head .status{
+    flex: 5%
+}
+
+.topic-head .subjects{
+    flex: 70%
+}
+
+.topic-head .replies{
+    flex: 10%
+}
+
+.topic-head .last-reply{
+    flex: 15%
+}
+
+/* Topics Body */
+.topic-row{
+    display: flex;
+
+}
+
+.topic-row .status, .topic-row .subjects, .topic-row .replies, .topic-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color:purple;
+}
+.topic-row .status{
+    flex: 5%;
+
+}
+
+.topic-row .subjects{
+    flex: 70%;
+
+}
+
+.topic-row .replies{
+    flex: 10%;
+
+}
+
+.topic-row .last-reply{
+    flex: 15%;
+
+}
+

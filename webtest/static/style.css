@@ -1,0 +1,366 @@
+/*Global*/
+*{
+    box-sizing:border-box;
+}
+
+html{
+    font-size:14px;
+    font-family: Verdana, sans-serif;
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+a{
+    color: rgb(94, 255, 0);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1{
+    font-size:16px;
+    font-weight:bolder;
+}
+
+/* index.html */
+
+.container {
+    margin: 10px;
+    padding: 20px;
+}
+.topics {
+    margin-top: 20px;
+
+}
+
+.topic-title{
+    background-color:rgb(174, 0, 255);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+
+}
+
+.topic-description *{
+    margin-block: 0;
+}
+
+.topic-column{
+    padding: 10px;
+    margin: 4px; 
+    border-radius: 5px;
+    background-color:rgb(174, 0, 255);
+
+}
+
+.center{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+
+header{
+    margin-inline: 10px
+}
+
+.bar{
+    display:flex;
+    align-items: center;
+    margin: 20px;
+    padding-right: 100pxl;
+}
+
+
+
+.hide{
+    display:none;
+}
+
+@font-face {
+    font-family: MilkyNice;
+    src:url(MilkyNice-Clean.otf);
+}
+.title{
+    font-size: 60px;
+    display: inline-block;
+    font-family: MilkyNice;
+}
+
+.search-bar{
+    border:solid 1px purple;
+    margin-left:150px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px  purple 
+}
+
+.search-bar select{
+    padding: 10px;
+}
+
+.search-bar input{
+    padding:10px;
+    padding-right: 220px;
+}
+
+.search-bar button{
+    padding:10px;
+    background-color: white;
+}
+
+.search-bar button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 1px 2px 3px white;
+}
+
+.login-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  
+  
+  .login-modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; 
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+
+  .close {
+    
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+.signup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    }
+
+/* Modal Content/Box */
+    .signup-modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    }
+
+    /* Close button on hover */
+    .close:hover,
+    .close:focus {
+    color: red;
+    cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.topicpost-container .input[type=text] {
+padding: 10px;
+}
+.topic-post {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    }
+
+
+    .topic-post-content {
+    background-color: #fefefe;
+    margin: 400px; 
+    border: 1px solid #888;
+    width: 5%;
+
+    }
+
+
+    .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    }
+
+
+    .close:hover,
+    .close:focus {
+    color: red;
+    cursor: pointer;
+    }
+
+
+    .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+
+/* Info*/
+
+.info{
+    padding: 20px;
+    background-color: purple;
+}
+
+.chart{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: purple;
+    display:block;
+    text-align: center;
+
+}
+
+.topic-head{
+    display:flex;
+}
+
+.topic-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: purple;
+    font-weight:bold;
+}
+
+.topic-head .status{
+    flex: 5%
+}
+
+.topic-head .subjects{
+    flex: 70%
+}
+
+.topic-head .replies{
+    flex: 10%
+}
+
+.topic-head .last-reply{
+    flex: 15%
+}
+
+/* Topics Body */
+.topic-row{
+    display: flex;
+
+}
+
+.topic-row .status, .topic-row .subjects, .topic-row .replies, .topic-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color:purple;
+}
+.topic-row .status{
+    flex: 0%
+
+}
+
+.topic-row .subjects{
+    flex: 70%;
+
+}
+
+.topic-row .replies{
+    flex: 10%;
+
+}
+
+.topic-row .last-reply{
+    flex: 15%;
+
+}
+

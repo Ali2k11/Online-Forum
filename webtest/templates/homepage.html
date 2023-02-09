@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Meme Zone!</title>
+</head>
+
+<body>
+    <header>
+        <div class="bar">
+            <div class="title">Debate Forum</div>
+            <div class="search-bar">
+                <div>
+                    <select name=""id="">
+                        <option value="everything">Everything</option>
+                        <option value="everything">Topics</option>
+                        <option value="everything">Replies</option>
+                        </select>
+                        <input type="text" name="q" id="" placeholder="search ...">
+                        <button><i class=" fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="container">
+                <a href="/logout">Logout</a>
+                <p>{{session.user_id}}</p>
+
+            </div>
+        
+
+
+    </header>
+    <button onclick="document.getElementById('popup').style.display='block'">Post Forum</button>
+    <div id="popup" class="topic-post">
+        <form class="topic-post-content animate" action="/topicpost" method="POST">
+            <div class=container2>
+            <span onclick="document.getElementById('popup').style.display='none'"
+            class="close" title="Close Modal">&times;</span>
+            </div>
+
+
+            <div class="topicpost-container">
+                <label for="title"><b>Title:</b></label>
+                <input type="text" placeholder="enter title..." name="topic_name" required>
+                <label>
+                <label for="title"><b>Title Description:</b></label>
+                <input type="text" placeholder="enter description..." name="topic_description" required>
+                <button type="submit">Post</button>
+                <label>
+            </div>
+            <div class="container" style="background-color:#1900f7">
+                <button type="button" onclick="document.getElementById('popup').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+        </div>
+        <script>
+            // Get the modal
+            var postmodal = document.getElementById('popup');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == postmodal) {
+                    postmodal.style.display = "none";
+                }
+            }
+        </script>
+    
+    
+    <div class="container">
+        <div class="topics-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Topic Name:</th>
+                        <th>Topic Description:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for topicpost in results %}
+                    <tr>
+                        <td>{{topicpost[1]}}</td>
+                        <td>{{topicpost[2]}}</td>
+                    </tr>
+                    {% endfor %}
+
+
+                </tbody>
+            </table>
+           
+
+        <div>
+            <div class="info">
+                <div class="chart">
+                    Forum - Stats &nbsp; <i class=" fa fa-bar-chart"></i>
+                </div>
+                <div>
+                    <span><u>1250</u> Topics by <u>35,250</u> Users</span><br>
+                    <span>Latest Post by: <b><a href="#">Post </a></b>on 12 Jan 2021 by<a href="#"> User</a></span> 
+                </div>
+
+            </div>
+            <footer>
+                <span>&copy; &nbsp; Ali Khan | All Rights Reserved. </span>
+            </footer>
+        </div>   
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
